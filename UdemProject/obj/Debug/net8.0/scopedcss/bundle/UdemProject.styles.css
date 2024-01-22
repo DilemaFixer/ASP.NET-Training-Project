@@ -1,0 +1,49 @@
+/* _content/UdemProject/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-xat3gubdww] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-xat3gubdww] {
+  color: #0077cc;
+}
+
+.btn-primary[b-xat3gubdww] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-xat3gubdww], .nav-pills .show > .nav-link[b-xat3gubdww] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-xat3gubdww] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-xat3gubdww] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-xat3gubdww] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-xat3gubdww] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-xat3gubdww] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

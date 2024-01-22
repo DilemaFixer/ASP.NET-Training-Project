@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UdemProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c2831b76cc51f000a608f80b17dd67099515f99")]
 [assembly: System.Reflection.AssemblyProductAttribute("UdemProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UdemProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
