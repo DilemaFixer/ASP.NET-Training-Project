@@ -2,7 +2,17 @@
 
 @model List<Category>
 
-<h1>Category Administration Page</h1>
+<div class= "container"> 
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class= "text-dark">
+                Category List
+            </h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Category" asp-action="Create" class="btn btn-outline-dark"><i class="bi bi-file-earmark-plus"></i> Add New Category</a>
+        </div>
+    </div>
 <table class = "table table-bordered table-striped"> 
     <thead>
         <tr> 
@@ -24,3 +34,4 @@
         }
     </tbody>
 </table>
+</div>
