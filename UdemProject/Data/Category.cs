@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace UdemProject.Data
 {
@@ -8,7 +9,11 @@ namespace UdemProject.Data
         public int Id {  get; set; }
 
         [Required]
+        [MaxLength(100 , ErrorMessage = "Is my error msg for Name")]
         public string Name { get; set; }
+
+        [DisplayName("Display Order")]
+        [Range(0,100 , ErrorMessage ="Is my error msg for Display order")]
         public int DisplayOrder { get; set; }
     }
 }

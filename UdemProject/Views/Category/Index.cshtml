@@ -2,7 +2,7 @@
 
 @model List<Category>
 
-<div class= "container"> 
+<div class="container">
     <div class="row pt-4">
         <div class="col-6">
             <h2 class= "text-dark">
@@ -13,8 +13,8 @@
             <a asp-controller="Category" asp-action="Create" class="btn btn-outline-dark"><i class="bi bi-file-earmark-plus"></i> Add New Category</a>
         </div>
     </div>
-<table class = "table table-bordered table-striped"> 
-    <thead>
+    <table class="table table-bordered">
+        <thead>
         <tr> 
             <th> 
                 Category Name
@@ -24,12 +24,22 @@
             </th>
         </tr>
     </thead>
-    <tbody> 
-        @foreach(var obj in Model)
+        <tbody>
+            @foreach(var obj in Model.OrderBy(u => u.DisplayOrder))
         {
             <tr>
                 <td>@obj.Name</td>
                <td>@obj.DisplayOrder</td>
+               <td>
+                   <div class="w-75 btn-group" role="group">
+                            <a asp-controller="Category" asp-action="Edit" asp-route-id ="@obj.Id" class="btn btn-outline-dark">
+                                <i class="bi bi-pencil-square"></i> Edit
+                       </a>
+                            <a asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-outline-danger">
+                                <i class="bi bi-trash3"></i> Delete
+                            </a>
+                   </div>
+               </td>
             </tr>
         }
     </tbody>
