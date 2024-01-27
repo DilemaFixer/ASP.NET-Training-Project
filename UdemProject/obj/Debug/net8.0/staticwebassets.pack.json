@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\Users\\Илля\\Documents\\GitHub\\ACP.NET-Training-Project\\UdemProject\\wwwroot\\js\\statistics.js",
+      "PackagePath": "staticwebassets\\js\\statistics.js"
+    },
+    {
       "Id": "C:\\Users\\Илля\\Documents\\GitHub\\ACP.NET-Training-Project\\UdemProject\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

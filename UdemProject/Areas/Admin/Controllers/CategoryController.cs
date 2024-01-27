@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using UdemProject.Data;
 
-namespace UdemProject.Controllers
+namespace UdemProject.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         private ApplicationDbContext _categoryDataBase;
@@ -13,7 +14,7 @@ namespace UdemProject.Controllers
 
         public IActionResult Index()
         {
-           List<Category> categories = _categoryDataBase.Category.ToList();
+            List<Category> categories = _categoryDataBase.Category.ToList();
             return View(categories);
         }
 
@@ -25,14 +26,14 @@ namespace UdemProject.Controllers
         [HttpPost]
         public IActionResult Create(Category category)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 _categoryDataBase.Category.Add(category);
                 _categoryDataBase.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            if(category.Name == null)
+            if (category.Name == null)
             {
                 ModelState.AddModelError("Name", "Name is null");
                 return View();
@@ -48,12 +49,12 @@ namespace UdemProject.Controllers
 
         public IActionResult Edit(int? id)
         {
-            if(id == null || id ==0) 
+            if (id == null || id == 0)
                 return NotFound();
 
             Category targetCategory = _categoryDataBase.Category.FirstOrDefault(c => c.Id == id);
 
-            if(targetCategory == null)
+            if (targetCategory == null)
                 return NotFound(nameof(targetCategory));
 
             return View(targetCategory);
@@ -68,7 +69,7 @@ namespace UdemProject.Controllers
                 _categoryDataBase.SaveChanges();
                 return RedirectToAction("Index");
             }
-         
+
             return View();
         }
 
@@ -85,12 +86,12 @@ namespace UdemProject.Controllers
             return View(targetCategory);
         }
 
-        [HttpPost , ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         public IActionResult DeletePOST(int? id)
         {
-            Category? category = _categoryDataBase.Category.FirstOrDefault(u => u.Id == id); 
+            Category? category = _categoryDataBase.Category.FirstOrDefault(u => u.Id == id);
 
-            if(category ==null) 
+            if (category == null)
                 return NotFound();
 
             _categoryDataBase.Category.Remove(category);

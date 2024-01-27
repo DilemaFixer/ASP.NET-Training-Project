@@ -253,3 +253,16 @@ C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debu
 C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\obj\Debug\net8.0\UdemProject.csproj.AssemblyReference.cache
 C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\obj\Debug\net8.0\UdemProject.csproj.CopyComplete
+C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
+C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
+C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debug\net8.0\Microsoft.JSInterop.dll
+C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debug\net8.0\System.Web.DataVisualization.Design.dll
+C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debug\net8.0\System.Web.DataVisualization.dll
+C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debug\net8.0\System.Windows.Forms.DataVisualization.Design.dll
+C:\Users\Илля\Documents\GitHub\ACP.NET-Training-Project\UdemProject\bin\Debug\net8.0\System.Windows.Forms.DataVisualization.dll
