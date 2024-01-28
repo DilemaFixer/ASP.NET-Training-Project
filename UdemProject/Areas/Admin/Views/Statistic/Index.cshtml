@@ -1,7 +1,14 @@
-﻿<h1>Sell statistic</h1>
+﻿@using UdemProject.Data
+@model List<Category>
+
+<h1>Sell statistic</h1>
 <div>
     <canvas id="StatisticChart"></canvas>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src = "~/js/statistics.js"></script>
+<script src="~/js/statistics.js"></script>
+
+<script>
+    loadDataTable(Model.Select(c => c.Name), Model.Select(c => c.Id));
+</script>

@@ -1,20 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using UdemProject.Data;
+using UdemProject.Data.IRepository.Category;
 
 namespace UdemProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class CategoryController : Controller
     {
-        private ApplicationDbContext _categoryDataBase;
-        public CategoryController(ApplicationDbContext applicationDbContext)
+        private ICategoryInterafce _categoryDataBase;
+        public CategoryController(ICategoryInterafce applicationDbContext)
         {
             _categoryDataBase = applicationDbContext;
         }
 
         public IActionResult Index()
         {
-            List<Category> categories = _categoryDataBase.Category.ToList();
+            List<Category> categories = _categoryDataBase.GetAll().ToList();
             return View(categories);
         }
 
@@ -28,8 +29,8 @@ namespace UdemProject.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _categoryDataBase.Category.Add(category);
-                _categoryDataBase.SaveChanges();
+                _categoryDataBase.Add(category);
+                _categoryDataBase.Save();
                 return RedirectToAction("Index");
             }
 
@@ -52,7 +53,7 @@ namespace UdemProject.Areas.Admin.Controllers
             if (id == null || id == 0)
                 return NotFound();
 
-            Category targetCategory = _categoryDataBase.Category.FirstOrDefault(c => c.Id == id);
+            Category targetCategory = _categoryDataBase.Get(c => c.Id == id);
 
             if (targetCategory == null)
                 return NotFound(nameof(targetCategory));
@@ -65,8 +66,8 @@ namespace UdemProject.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _categoryDataBase.Category.Update(category);
-                _categoryDataBase.SaveChanges();
+                _categoryDataBase.Update(category);
+                _categoryDataBase.Save();
                 return RedirectToAction("Index");
             }
 
@@ -78,7 +79,7 @@ namespace UdemProject.Areas.Admin.Controllers
             if (id == null || id == 0)
                 return NotFound();
 
-            Category targetCategory = _categoryDataBase.Category.FirstOrDefault(c => c.Id == id);
+            Category targetCategory = _categoryDataBase.Get(c => c.Id == id);
 
             if (targetCategory == null)
                 return NotFound(nameof(targetCategory));
@@ -89,13 +90,13 @@ namespace UdemProject.Areas.Admin.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePOST(int? id)
         {
-            Category? category = _categoryDataBase.Category.FirstOrDefault(u => u.Id == id);
+            Category? category = _categoryDataBase.Get(u => u.Id == id);
 
             if (category == null)
                 return NotFound();
 
-            _categoryDataBase.Category.Remove(category);
-            _categoryDataBase.SaveChanges();
+            _categoryDataBase.Remove(category);
+            _categoryDataBase.Save();
             return RedirectToAction("Index");
         }
     }

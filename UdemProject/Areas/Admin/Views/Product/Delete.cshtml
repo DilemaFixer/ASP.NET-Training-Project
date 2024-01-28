@@ -1,0 +1,28 @@
+﻿@using UdemProject.Data
+@model Product
+
+<form method="post">
+    <div class="card border-primary p-3 mt-4 rounded">
+        <div class="row pb-2">
+            <h2 class="text-dark">Delete Category</h2>
+            <hr />
+        </div>
+        <h3>Base info about product</h3>
+        <div class="md-3 row p-1">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+        </div>
+        <div class="md-3 row p-1">
+            <label asp-for="Author"></label>
+            <input asp-for="Author" class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled />
+        </div>
+        <div class="row mt-1">
+            <div class="col-6 col-md-2">
+                <button type="submit" class="btn btn-outline-danger form-control" style="width:150px">Delete</button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Product" asp-action="Index" class="btn btn-danger form-control" style="width:150px">Back</a>
+            </div>
+        </div>
+    </div>
+</form>

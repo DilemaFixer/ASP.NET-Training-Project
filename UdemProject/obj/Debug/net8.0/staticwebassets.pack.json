@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\UdemProject.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Илля\\Documents\\GitHub\\ACP.NET-Training-Project\\UdemProject\\wwwroot\\css\\Animation.css",
+      "PackagePath": "staticwebassets\\css\\Animation.css"
+    },
+    {
       "Id": "C:\\Users\\Илля\\Documents\\GitHub\\ACP.NET-Training-Project\\UdemProject\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
